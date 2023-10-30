@@ -1,7 +1,7 @@
 # Week 6: Long short-term memory (LSTM) and gated recurrent units (GRU)
 
-
 # Long Short-Term Memory (LSTM)
+
 Long Short-Term Memory (LSTM) networks are a type of recurrent neural network (RNN) introduced by Hochreiter and Schmidhuber in 1997. They're specifically designed to avoid the long-term dependency problem, a challenge with standard RNNs, which have trouble learning to connect information that is spaced far apart in time sequences.
 
 LSTM networks include a 'memory cell' that can maintain information in memory for long periods. As the network processes sequences of data, it can selectively read from, write to, or forget its memory cell using structures called gates. These gates are essentially neural networks themselves, which learn to control the memory cell's behavior.
@@ -14,6 +14,7 @@ Output Gate: Determines what the next hidden state should be.
 The critical advantage of LSTMs is their ability to remember from long-term sequences (window sizes), which is extremely useful in many NLP tasks.
 
 # Gated Recurrent Units (GRU)
+
 Gated Recurrent Units (GRU) are another variant of recurrent neural networks, introduced by Cho, et al. in 2014. They're similar to LSTMs with a forget and an input gate, but they lack an output gate. Also, the memory cell and hidden state are merged into a single context unit, resulting in a simpler and more streamlined architecture.
 
 In particular, GRUs have two gates:
@@ -34,6 +35,12 @@ For example, in the task of text generation, an LSTM or GRU network can learn th
 [Tutorial on GRU](https://d2l.ai/chapter_recurrent-modern/gru.html)
 
 [Using LSTM and GRU neural network methods for traffic flow prediction](https://www.researchgate.net/profile/Li-Li-86/publication/312402649_Using_LSTM_and_GRU_neural_network_methods_for_traffic_flow_prediction/links/5c20d38d299bf12be3971696/Using-LSTM-and-GRU-neural-network-methods-for-traffic-flow-prediction.pdf)
+
+# Extra Readings
+
+[A comparison of LSTM and GRU networks for learning symbolic sequences](https://arxiv.org/pdf/2107.02248.pdf)
+
+[Illustrated Guide to LSTM’s and GRU’s: A step by step explanation](https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21)
 
 # Code examples
 
@@ -79,4 +86,4 @@ Training Loop:
 We run a loop for a specified number of epochs to train the GRU model. In each epoch, we forward propagate the input sequences through the model, compute the loss, perform backpropagation to calculate gradients, and update the model's parameters using the optimizer. The goal is to minimize the loss and improve the model's prediction accuracy.
 
 Testing the Trained Model:
-After training, we evaluate the GRU model's performance on a test sequence, [10, 11]. The trained GRU predicts the next number in the sequence based on the learned patterns from the training data."# research-stay-week-6" 
+After training, we evaluate the GRU model's performance on a test sequence, [10, 11]. The trained GRU predicts the next number in the sequence based on the learned patterns from the training data."# research-stay-week-6"
